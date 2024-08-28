@@ -1,0 +1,73 @@
+Added Component: Designator=C1(CAP_D8XL13)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "87EC0514"; VariantName = "[No Variations]"
+Added Component: Designator=C2(C_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "0603CG100J250NT"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP_D4XL7)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "KS226M016C07RR0VH2FP0"; VariantName = "[No Variations]"
+Added Component: Designator=C4(C_H8xW6)
+Add component (AddParameter): Name = "Link"; Value = "https://sharvielectronics.com/product/0-01uf-400v-2g103j-polyester-film-capacitor/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "2G103"; VariantName = "[No Variations]"
+Added Component: Designator=D5(SMA_M7)
+Add component (AddParameter): Name = "Link"; Value = "https://www.lcsc.com/product-detail/Fast-Recovery-High-Efficiency-Diodes_KEXIN-FR107-RS1M_C489136.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "FR107(RS1M)"; VariantName = "[No Variations]"
+Added Component: Designator=D6(SMA_M7)
+Add component (AddParameter): Name = "Link"; Value = "https://www.lcsc.com/product-detail/Schottky-Diodes_TWGMC-SS54_C727065.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "SS54"; VariantName = "[No Variations]"
+Added Component: Designator=F1(R_TH_1/2W)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "KNP1/2W-2O2±5%-XT52"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(MB10F)
+Add component (AddParameter): Name = "Link"; Value = "MB10F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "https://www.lcsc.com/product-detail/Bridge-Rectifiers_HXY-MOSFET-MB10F_C5345974.html"; VariantName = "[No Variations]"
+Added Component: Designator=IC2(SOP8)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J1(MMT Metal shrapnel connector)
+Add component (AddParameter): Name = "Link"; Value = "https://mmt2018.en.made-in-china.com/product/rjtmlFMyLiks/China-Mmt-AC-Mobile-Phone-Charger-Metal-Shrapnel-Contact.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J2(MMT Metal shrapnel connector)
+Add component (AddParameter): Name = "Link"; Value = "https://mmt2018.en.made-in-china.com/product/rjtmlFMyLiks/China-Mmt-AC-Mobile-Phone-Charger-Metal-Shrapnel-Contact.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J3(Wire solder connector)
+Added Component: Designator=J4(Wire solder connector)
+Added Component: Designator=R1(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "HP03W5J0225T5E"; VariantName = "[No Variations]"
+Added Component: Designator=R2(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "FRL0603FR500TS"; VariantName = "[No Variations]"
+Added Component: Designator=R3(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "RT0603BRE078KL"; VariantName = "[No Variations]"
+Added Component: Designator=R4(R_0805)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "ARG05FTC2503N"; VariantName = "[No Variations]"
+Added Component: Designator=R5(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "AECR0603F47R0K9"; VariantName = "[No Variations]"
+Added Component: Designator=R6(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "ESR03EZPF1003"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component C1 15uF
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component C2 10pF
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component C3 22
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component C4 0.01uF
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component D5 RS1M
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component D6 S54
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component F1 2.2 ohm
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component IC1 MB10F
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component IC2 DK912
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J1 L
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J2 N
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J3 Wire solder connector
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J4 Wire solder connector
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R1 2.2M
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R2 0.5
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R3 8K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R4 250K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R5 47
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R6 100K
+Added Room: Name=Mobile_adapter_5V_1A_LQ
