@@ -1,0 +1,5 @@
+Change component parameters: Designator = "IC1" ("IC1"); Footprint = "MB10F"; UniqueID = "\ERKCNSBH" ("\ERKCNSBH")
+Change component parameters (AddParameter): Name = "Link"; Value = "https://www.lcsc.com/product-detail/Bridge-Rectifiers_HXY-MOSFET-MB10F_C5345974.html"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component IC1 MB10F
+Added Room: Name=Mobile_adapter_5V_1A_LQ

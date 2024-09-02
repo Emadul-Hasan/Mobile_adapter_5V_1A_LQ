@@ -83,7 +83,7 @@ GenerateClassCluster=0
 DocumentUniqueId=UUTDKFCF
 
 [Document3]
-DocumentPath=C:\Users\Public\Documents\Altium\AD22\Library\Custom libery\Custom pcb footprint.PcbLib
+DocumentPath=C:\Users\Public\Documents\Altium\AD22\Library\Custom-PCB-library\Custom pcb footprint.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -100,7 +100,7 @@ GenerateClassCluster=0
 DocumentUniqueId=HRBAMGNG
 
 [Document4]
-DocumentPath=C:\Users\Public\Documents\Altium\AD22\Library\Custom libery\Custom pcb schamatic.SchLib
+DocumentPath=C:\Users\Public\Documents\Altium\AD22\Library\Custom-PCB-library\Custom pcb schamatic.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
