@@ -1,0 +1,20 @@
+Added Component: Designator=C5(CAP_D8XL9)
+Add component (AddParameter): Name = "Link"; Value = "https://www.lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_Ymin-LKMD0901C561MF_C442579.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "LKMD0901C561MF"; VariantName = "[No Variations]"
+Added Component: Designator=Tr1(T_EE19_5V1A)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_2 Pin=Tr1-4
+Added Pin To Net: NetName=NetC2_1 Pin=Tr1-7
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=D6-2
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=Tr1-3
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetD6_1 Pin=D6-1
+Added Pin To Net: NetName=NetD6_1 Pin=Tr1-1
+Added Net: Name=NetD6_1
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component C5 560uF 16V
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component Tr1 DK912
+Added Room: Name=Mobile_adapter_5V_1A_LQ
