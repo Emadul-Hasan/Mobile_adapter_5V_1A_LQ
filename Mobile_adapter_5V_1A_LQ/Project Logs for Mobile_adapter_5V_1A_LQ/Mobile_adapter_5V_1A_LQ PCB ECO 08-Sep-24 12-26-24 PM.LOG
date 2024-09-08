@@ -1,0 +1,32 @@
+Added Component: Designator=LED1(LED_RG_3mm)
+Add component (AddParameter): Name = "Link"; Value = "https://www.lcsc.com/datasheet/lcsc_datasheet_2401120947_XINGLIGHT-XL-A324SURSYGW_C2895562.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "XL-A324SURSYGW"; VariantName = "[No Variations]"
+Added Component: Designator=R7(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "FRC0603J102 TS"; VariantName = "[No Variations]"
+Added Component: Designator=Rc(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "FRC0603J472 TS"; VariantName = "[No Variations]"
+Added Component: Designator=Rr(R_0603)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "0603WAJ0221T5E"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC5_1 Pin=J3-1
+Added Pin To Net: NetName=NetC5_1 Pin=LED1-1
+Added Pin To Net: NetName=NetC5_1 Pin=R7-1
+Added Pin To Net: NetName=NetC2_1 Pin=Rr-1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=J4-1
+Added Pin To Net: NetName=NetC5_2 Pin=R7-2
+Added Pin To Net: NetName=NetC5_2 Pin=Rc-2
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetLED1_2 Pin=LED1-2
+Added Pin To Net: NetName=NetLED1_2 Pin=Rc-1
+Added Net: Name=NetLED1_2
+Added Pin To Net: NetName=NetLED1_3 Pin=LED1-3
+Added Pin To Net: NetName=NetLED1_3 Pin=Rr-2
+Added Net: Name=NetLED1_3
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component LED1 LED 3mm RG Com cathod
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R7 1K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component Rc 4.7K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component Rr 220
+Added Room: Name=Mobile_adapter_5V_1A_LQ
