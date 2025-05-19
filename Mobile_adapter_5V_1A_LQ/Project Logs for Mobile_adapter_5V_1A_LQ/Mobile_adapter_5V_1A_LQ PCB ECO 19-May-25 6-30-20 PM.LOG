@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=V+ NewDesignator=J3
+Change Component Designator: OldDesignator=V- NewDesignator=J4
+Added Component: Designator=Tr1(T_EE19_5V1A)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component Tr1 TR_MC_5V1A
+Added Room: Name=Mobile_adapter_5V_1A_LQ
