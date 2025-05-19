@@ -1,0 +1,78 @@
+Added Component: Designator=C1(C_0603)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_HRE-CGA0603C0G100J250JT_C41361115.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "CGA0603C0G100J250JT"; VariantName = "[No Variations]"
+Added Component: Designator=E1(CAP_D8XL13)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGS2GM6R8F12OT_C112471.html?s_z=n_Capacitors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "EGS2GM6R8F12OT"; VariantName = "[No Variations]"
+Added Component: Designator=E2(CAP_D6.5XL12)
+Add component (AddParameter): Name = "Link"; Value = "680uF 6.3V ±20% Plugin,D6.3xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "ERR0JM681E12OT"; VariantName = "[No Variations]"
+Added Component: Designator=E3(CAP_D5XL11)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_HRK-50V10uF-CD110_C2960200.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "50V10uF CD110"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(MB10F)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Bridge-Rectifiers_Guangdong-Hottech-MB10F_C193012.html?s_z=n_MB10F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "MB10F"; VariantName = "[No Variations]"
+Added Component: Designator=J1(MMT Metal shrapnel connector)
+Add component (AddParameter): Name = "Link"; Value = "https://mmt2018.en.made-in-china.com/product/rjtmlFMyLiks/China-Mmt-AC-Mobile-Phone-Charger-Metal-Shrapnel-Contact.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J2(MMT Metal shrapnel connector)
+Add component (AddParameter): Name = "Link"; Value = "https://mmt2018.en.made-in-china.com/product/rjtmlFMyLiks/China-Mmt-AC-Mobile-Phone-Charger-Metal-Shrapnel-Contact.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found Wire solder connector
+Add Component: Footprint Not Found Wire solder connector
+Added Component: Designator=LED1(LED_RG_3mm)
+Add component (AddParameter): Name = "Link"; Value = "https://www.lcsc.com/datasheet/lcsc_datasheet_2401120947_XINGLIGHT-XL-A324SURSYGW_C2895562.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "XL-A324SURSYGW"; VariantName = "[No Variations]"
+Added Component: Designator=R1(R_0603)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RT0603BRE07115KL_C861635.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "RT0603BRE07115KL"; VariantName = "[No Variations]"
+Added Component: Designator=R3(R_0603)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF1001T5E_C21190.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "0603WAF1001T5E"; VariantName = "[No Variations]"
+Added Component: Designator=R4(R_0603)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF1001T5E_C21190.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "0603WAF1001T5E"; VariantName = "[No Variations]"
+Added Component: Designator=R5(R_0603)
+Add component (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF1001T5E_C21190.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "0603WAF1001T5E"; VariantName = "[No Variations]"
+Added Component: Designator=U1(SOP8-7)
+Add component (AddParameter): Name = "Link"; Value = "https://www.worldwayelec.com/pro/newhaven-display-international/mt2513/4924573/mt2513.pdf?utm_source=chatgpt.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "MT2513"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetIC1_1 Pin=IC1-1
+Added Pin To Net: NetName=NetIC1_1 Pin=J2-1
+Added Pin To Net: NetName=NetIC1_1 Pin=J2-2
+Added Pin To Net: NetName=NetE1_1 Pin=E1-1
+Added Pin To Net: NetName=NetE1_1 Pin=IC1-3
+Added Net: Name=NetE1_1
+Added Pin To Net: NetName=NetE1_2 Pin=E1-2
+Added Pin To Net: NetName=NetE1_2 Pin=IC1-4
+Added Net: Name=NetE1_2
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=NetIC1_2 Pin=J1-1
+Added Pin To Net: NetName=NetIC1_2 Pin=J1-2
+Added Net: Name=NetIC1_2
+Added Pin To Net: NetName=NetU1_2 Pin=U1-2
+Added Pin To Net: NetName=NetU1_2 Pin=U1-3
+Added Net: Name=NetU1_2
+Added Pin To Net: NetName=NetU1_5 Pin=U1-5
+Added Pin To Net: NetName=NetU1_5 Pin=U1-6
+Added Net: Name=NetU1_5
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component C1 10pF
+Add Class Member: Failed to add class member : Component D1 SS24F
+Add Class Member: Failed to add class member : Component D2 F7
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component E1 6.8uF 400V
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component E2 680uF
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component E3 10uF
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component IC1 MB10F
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J1 L
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J2 N
+Add Class Member: Failed to add class member : Component J3 Wire solder connector
+Add Class Member: Failed to add class member : Component J4 Wire solder connector
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component LED1 LED 3mm RG Com cathod
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R1 115K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R3 1K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R4 1K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component R5 1K
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component U1 MT2513
+Added Room: Name=Mobile_adapter_5V_1A_LQ
