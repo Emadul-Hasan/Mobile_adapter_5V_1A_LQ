@@ -97,7 +97,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=HRBAMGNG
+DocumentUniqueId=
 
 [Document4]
 DocumentPath=C:\Users\Public\Documents\Altium\AD22\Library\Custom-PCB-library\Custom pcb schamatic.SchLib
@@ -114,7 +114,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=UYMTQWVP
+DocumentUniqueId=
 
 [Configuration1]
 Name=Sources
