@@ -1,0 +1,5 @@
+Added Component: Designator=J3(Wire solder connector _SMD - duplicate)
+Added Component: Designator=J4(Wire solder connector _SMD - duplicate)
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J3 Vout+
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component J4 Vout-
+Added Room: Name=Mobile_adapter_5V_1A_LQ
