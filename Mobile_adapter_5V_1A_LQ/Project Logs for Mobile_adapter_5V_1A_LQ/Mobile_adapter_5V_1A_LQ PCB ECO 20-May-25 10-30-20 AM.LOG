@@ -1,0 +1,5 @@
+Added Component: Designator=CY1(C_TH_104/102)
+Add component (AddParameter): Name = "Link"; Value = "https://www.indiamart.com/proddetail/222-1kv-capacitor-27431526388.html?srsltid=AfmBOooTugq0epycLVitZ6jGxnjvQJHEQvSUTzlPssH3imFvuBxUUXmC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Mobile_adapter_5V_1A_LQ Member=Component CY1 222
+Added Room: Name=Mobile_adapter_5V_1A_LQ
