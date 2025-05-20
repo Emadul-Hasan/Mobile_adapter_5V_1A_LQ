@@ -97,7 +97,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=HRBAMGNG
 
 [Document4]
 DocumentPath=C:\Users\Public\Documents\Altium\AD22\Library\Custom-PCB-library\Custom pcb schamatic.SchLib
@@ -114,7 +114,11 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UYMTQWVP
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Mobile_adapter_5V_1A_LQ\Design Rule Check - Mobile_adapter_5V_1A_LQ.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
