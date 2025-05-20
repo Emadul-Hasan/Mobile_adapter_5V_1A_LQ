@@ -1,0 +1,51 @@
+Added Pin To Net: NetName=NetE1_1 Pin=Tr1-1
+Added Pin To Net: NetName=GND Pin=CY1-2
+Added Pin To Net: NetName=GND Pin=E2-2
+Added Pin To Net: NetName=GND Pin=E3-2
+Added Pin To Net: NetName=GND Pin=J4-1
+Added Pin To Net: NetName=GND Pin=R3-2
+Added Pin To Net: NetName=GND Pin=R4-2
+Added Pin To Net: NetName=GND Pin=R5-2
+Added Pin To Net: NetName=GND Pin=Tr1-5
+Added Net: Name=GND
+Added Pin To Net: NetName=IC_C Pin=Tr1-2
+Added Pin To Net: NetName=IC_C Pin=U1-5
+Added Pin To Net: NetName=IC_C Pin=U1-6
+Added Net: Name=IC_C
+Added Pin To Net: NetName=IC_FB Pin=R1-2
+Added Pin To Net: NetName=IC_FB Pin=U1-2
+Added Pin To Net: NetName=IC_FB Pin=U1-3
+Added Net: Name=IC_FB
+Added Pin To Net: NetName=IN_GND Pin=CY1-1
+Added Pin To Net: NetName=IN_GND Pin=E1-2
+Added Pin To Net: NetName=IN_GND Pin=IC1-4
+Added Pin To Net: NetName=IN_GND Pin=Tr1-3
+Added Net: Name=IN_GND
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=U1-1
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=U1-7
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=D2-1
+Added Pin To Net: NetName=NetD1_1 Pin=Tr1-6
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetLED1_2 Pin=LED1-2
+Added Pin To Net: NetName=NetLED1_2 Pin=R4-1
+Added Net: Name=NetLED1_2
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=Tr1-4
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=R_LED Pin=D2-2
+Added Pin To Net: NetName=R_LED Pin=E3-1
+Added Pin To Net: NetName=R_LED Pin=LED1-3
+Added Pin To Net: NetName=R_LED Pin=R5-1
+Added Net: Name=R_LED
+Added Pin To Net: NetName=Vout+ Pin=D1-2
+Added Pin To Net: NetName=Vout+ Pin=E2-1
+Added Pin To Net: NetName=Vout+ Pin=J3-1
+Added Pin To Net: NetName=Vout+ Pin=LED1-1
+Added Pin To Net: NetName=Vout+ Pin=R3-1
+Added Net: Name=Vout+
+Added Room: Name=Mobile_adapter_5V_1A_LQ

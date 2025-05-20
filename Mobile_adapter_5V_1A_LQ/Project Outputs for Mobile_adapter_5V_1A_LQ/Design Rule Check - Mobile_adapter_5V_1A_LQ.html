@@ -1,0 +1,427 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">20-May-25</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">6:16:02 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc" class="file"><acronym title="D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc">D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">33</td></tr>
+</table>
+</td>
+</table><a name="IDTL0CCUINNLXYDOBDH1FL1AMQDZGY0P3BPKJKZEIUHUEMDW4PUPP"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKJJANLCP3VBIG1JUBIVHZ2DFZND5V311O3XWU4NSTLYFK2Y24XMK">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTI511YRXHVOAKVNGO5EV4FVWJNXQRHKWODRUMDIBH10V3CUFCBEK">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFQ1SKYWSN41ALVFRPQH5SK0TQJ2AEYICC2AT3GB2HKV3KJRHCIHJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">33</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTUKGJJ4KJXVPIFS1LSC52IAR3DFP4PCGDSPZTNMDFUT2PU2FBNQN">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPSMDHFMFBTXZLMYYIXPPGFXBRMCDIXGUHV3L1RHAUEMHSZA3YBNL">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMJE3OSX2LPH1LUNQ2RVBIKUBYDPRXPYDG10XTLCO52LS5ITQBYXH">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXYEXCS3YXMXTHFZIMHB224E4PP3TPJCYNVMTGSJEMPZXGZTWX2S">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNVPNA3NAFZ1YMIXXGHQTHVNDVFKCD3MZGYR2FBCCLPTN0HMVUE5C">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAXN3HXAVA3UFL4Y44I0GP1KMSHEWXXENZJCVF3G4CVKGXNHMVK5P">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAXEO3LX2ZDYHLI2SIXUOHCN0ONZZKVUPJEQRCCBYNKNKNQZEJVYK">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXZQGZZAZUHDCFJY52YZ0FCTH0HZAUBWGLDK4BLIE3L2F1RE20ASC">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKVWV5JAJDJSWDA5NDQDOLLLUXOF4YLO4HD3HW5L2ZUA1XGPQH4PL">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHZJ0UITLUVRWJU0TN2KX43UV3FA5B4Y5B32232DD150XI5RTUJTB">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">33</td>
+</tr>
+</table><br><a name="IDFQ1SKYWSN41ALVFRPQH5SK0TQJ2AEYICC2AT3GB2HKV3KJRHCIHJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3041mil|Location2.X=3189.144mil|Location1.Y=3347.575mil|Location2.Y=3513.121mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3041mil|Location2.X=3189.144mil|Location1.Y=3347.575mil|Location2.Y=3513.121mil|Absolute=True">Un-Routed Net Constraint: Net NetC1_1 Between Pad U1-1(23.453mm,9.437mm) on Bottom Layer And Pad C1-1(26.213mm,12.214mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3041mil|Location2.X=3189.144mil|Location1.Y=3530.712mil|Location2.Y=3631.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3041mil|Location2.X=3189.144mil|Location1.Y=3530.712mil|Location2.Y=3631.165mil|Absolute=True">Un-Routed Net Constraint: Net NetC1_2 Between Pad U1-7(23.453mm,14.937mm) on Bottom Layer And Pad C1-2(26.213mm,13.814mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3078.026mil|Location2.X=3410.989mil|Location1.Y=3671.744mil|Location2.Y=3881.04mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3078.026mil|Location2.X=3410.989mil|Location1.Y=3671.744mil|Location2.Y=3881.04mil|Absolute=True">Un-Routed Net Constraint: Net IN_GND Between Pad Tr1-3(24.843mm,18.421mm) on Multi-Layer And Pad CY1-1(31.348mm,21.034mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3290.064mil|Location2.X=3410.989mil|Location1.Y=3991.15mil|Location2.Y=4181.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3290.064mil|Location2.X=3410.989mil|Location1.Y=3991.15mil|Location2.Y=4181.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad V--1(30.479mm,28.662mm) on Bottom Layer And Pad CY1-2(31.348mm,26.034mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2619.78mil|Location2.X=2746.165mil|Location1.Y=3934.74mil|Location2.Y=4156.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2619.78mil|Location2.X=2746.165mil|Location1.Y=3934.74mil|Location2.Y=4156.283mil|Absolute=True">Un-Routed Net Constraint: Net NetD1_1 Between Pad D2-1(13.254mm,28.425mm) on Bottom Layer And Pad D1-1(14.211mm,24.451mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2482.26mil|Location2.X=2599.079mil|Location1.Y=3768.441mil|Location2.Y=4009.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2482.26mil|Location2.X=2599.079mil|Location1.Y=3768.441mil|Location2.Y=4009.669mil|Absolute=True">Un-Routed Net Constraint: Net Vout+ Between Pad D1-2(10.211mm,24.451mm) on Bottom Layer And Pad E2-1(10.725mm,20.127mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2364.75mil|Location2.X=2588.685mil|Location1.Y=3934.74mil|Location2.Y=4030.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2364.75mil|Location2.X=2588.685mil|Location1.Y=3934.74mil|Location2.Y=4030.575mil|Absolute=True">Un-Routed Net Constraint: Net Vout+ Between Pad R3-1(6.426mm,25.332mm) on Bottom Layer And Pad D1-2(10.211mm,24.451mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2482.26mil|Location2.X=3120.929mil|Location1.Y=3934.74mil|Location2.Y=4188.252mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2482.26mil|Location2.X=3120.929mil|Location1.Y=3934.74mil|Location2.Y=4188.252mil|Absolute=True">Un-Routed Net Constraint: Net Vout+ Between Pad D1-2(10.211mm,24.451mm) on Bottom Layer And Pad V+-1(23.98mm,28.837mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2619.78mil|Location2.X=2865.554mil|Location1.Y=4016.232mil|Location2.Y=4156.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2619.78mil|Location2.X=2865.554mil|Location1.Y=4016.232mil|Location2.Y=4156.283mil|Absolute=True">Un-Routed Net Constraint: Net NetD1_1 Between Pad D2-1(13.254mm,28.425mm) on Bottom Layer And Pad Tr1-6(17.743mm,27.171mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.213mil|Location2.X=2580.535mil|Location1.Y=4072.653mil|Location2.Y=4159.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.213mil|Location2.X=2580.535mil|Location1.Y=4072.653mil|Location2.Y=4159.394mil|Absolute=True">Un-Routed Net Constraint: Net R_LED Between Pad LED1-3(1.277mm,28.104mm) on Multi-Layer And Pad D2-2(10.454mm,28.425mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.453mil|Location2.X=2824.354mil|Location1.Y=3461.827mil|Location2.Y=3581.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.453mil|Location2.X=2824.354mil|Location1.Y=3461.827mil|Location2.Y=3581.688mil|Absolute=True">Un-Routed Net Constraint: Net NetE1_1 Between Pad IC1-3(12.073mm,13.68mm) on Bottom Layer And Pad E1-1(16.447mm,12.589mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2737.614mil|Location2.X=2865.554mil|Location1.Y=3461.827mil|Location2.Y=3797.854mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2737.614mil|Location2.X=2865.554mil|Location1.Y=3461.827mil|Location2.Y=3797.854mil|Absolute=True">Un-Routed Net Constraint: Net NetE1_1 Between Pad E1-1(16.447mm,12.589mm) on Multi-Layer And Pad Tr1-1(17.743mm,18.421mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.037mil|Location2.X=2824.354mil|Location1.Y=3324.032mil|Location2.Y=3482.453mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2563.037mil|Location2.X=2824.354mil|Location1.Y=3324.032mil|Location2.Y=3482.453mil|Absolute=True">Un-Routed Net Constraint: Net IN_GND Between Pad IC1-4(12.063mm,11.16mm) on Bottom Layer And Pad E1-2(16.447mm,9.089mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2737.614mil|Location2.X=3145.081mil|Location1.Y=3324.032mil|Location2.Y=3797.854mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2737.614mil|Location2.X=3145.081mil|Location1.Y=3324.032mil|Location2.Y=3797.854mil|Absolute=True">Un-Routed Net Constraint: Net IN_GND Between Pad E1-2(16.447mm,9.089mm) on Multi-Layer And Pad Tr1-3(24.843mm,18.421mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2298.677mil|Location2.X=2599.079mil|Location1.Y=3670.016mil|Location2.Y=3806.402mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2298.677mil|Location2.X=2599.079mil|Location1.Y=3670.016mil|Location2.Y=3806.402mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad E3-2(5.048mm,19.138mm) on Multi-Layer And Pad E2-2(10.725mm,17.627mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2162.102mil|Location2.X=2286.992mil|Location1.Y=3719.661mil|Location2.Y=4030.771mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2162.102mil|Location2.X=2286.992mil|Location1.Y=3719.661mil|Location2.Y=4030.771mil|Absolute=True">Un-Routed Net Constraint: Net R_LED Between Pad R5-1(1.279mm,25.337mm) on Bottom Layer And Pad E3-1(3.048mm,19.138mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2262.654mil|Location2.X=2365.732mil|Location1.Y=3719.661mil|Location2.Y=3959.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2262.654mil|Location2.X=2365.732mil|Location1.Y=3719.661mil|Location2.Y=3959.866mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R4-2(3.833mm,23.536mm) on Bottom Layer And Pad E3-2(5.048mm,19.138mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2307.523mil|Location2.X=3133.567mil|Location1.Y=3186.866mil|Location2.Y=3483.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2307.523mil|Location2.X=3133.567mil|Location1.Y=3186.866mil|Location2.Y=3483.125mil|Absolute=True">Un-Routed Net Constraint: Net NetIC1_1 Between Pad IC1-1(5.573mm,11.177mm) on Bottom Layer And Pad J2-2(24.551mm,6.105mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2307.547mil|Location2.X=2414.616mil|Location1.Y=3190.399mil|Location2.Y=3581.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2307.547mil|Location2.X=2414.616mil|Location1.Y=3190.399mil|Location2.Y=3581.688mil|Absolute=True">Un-Routed Net Constraint: Net NetIC1_2 Between Pad IC1-2(5.573mm,13.68mm) on Bottom Layer And Pad J1-2(6.29mm,6.195mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.561mil|Location2.X=2509.104mil|Location1.Y=3190.399mil|Location2.Y=3316.509mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.561mil|Location2.X=2509.104mil|Location1.Y=3190.399mil|Location2.Y=3316.509mil|Absolute=True">Un-Routed Net Constraint: Net NetIC1_2 Between Pad J1-2(6.29mm,6.195mm) on Multi-Layer And Pad J1-1(8.54mm,6.195mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3066.512mil|Location2.X=3228.055mil|Location1.Y=3186.866mil|Location2.Y=3312.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3066.512mil|Location2.X=3228.055mil|Location1.Y=3186.866mil|Location2.Y=3312.976mil|Absolute=True">Un-Routed Net Constraint: Net NetIC1_1 Between Pad J2-2(24.551mm,6.105mm) on Multi-Layer And Pad J2-1(26.801mm,6.105mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2350.213mil|Location2.X=2417.268mil|Location1.Y=3983.205mil|Location2.Y=4159.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2350.213mil|Location2.X=2417.268mil|Location1.Y=3983.205mil|Location2.Y=4159.394mil|Absolute=True">Un-Routed Net Constraint: Net Vout+ Between Pad LED1-1(6.357mm,28.104mm) on Multi-Layer And Pad R3-1(6.426mm,25.332mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2250.213mil|Location2.X=2317.268mil|Location1.Y=3983.362mil|Location2.Y=4159.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2250.213mil|Location2.X=2317.268mil|Location1.Y=3983.362mil|Location2.Y=4159.394mil|Absolute=True">Un-Routed Net Constraint: Net NetLED1_2 Between Pad LED1-2(3.817mm,28.104mm) on Multi-Layer And Pad R4-1(3.833mm,25.336mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.213mil|Location2.X=2217.268mil|Location1.Y=3983.401mil|Location2.Y=4159.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.213mil|Location2.X=2217.268mil|Location1.Y=3983.401mil|Location2.Y=4159.394mil|Absolute=True">Un-Routed Net Constraint: Net R_LED Between Pad LED1-3(1.277mm,28.104mm) on Multi-Layer And Pad R5-1(1.279mm,25.337mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3168.577mil|Location2.X=3291.475mil|Location1.Y=3530.845mil|Location2.Y=3797.854mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3168.577mil|Location2.X=3291.475mil|Location1.Y=3530.845mil|Location2.Y=3797.854mil|Absolute=True">Un-Routed Net Constraint: Net NetR1_1 Between Pad Tr1-4(27.143mm,18.421mm) on Multi-Layer And Pad R1-1(28.862mm,13.842mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2991mil|Location2.X=3291.475mil|Location1.Y=3347.575mil|Location2.Y=3507.349mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2991mil|Location2.X=3291.475mil|Location1.Y=3347.575mil|Location2.Y=3507.349mil|Absolute=True">Un-Routed Net Constraint: Net IC_FB Between Pad U1-2(22.183mm,9.437mm) on Bottom Layer And Pad R1-2(28.862mm,12.042mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2262.654mil|Location2.X=2408.183mil|Location1.Y=3912.339mil|Location2.Y=3959.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2262.654mil|Location2.X=2408.183mil|Location1.Y=3912.339mil|Location2.Y=3959.866mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R4-2(3.833mm,23.536mm) on Bottom Layer And Pad R3-2(6.426mm,23.532mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2364.75mil|Location2.X=3235.633mil|Location1.Y=3912.339mil|Location2.Y=4142.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2364.75mil|Location2.X=3235.633mil|Location1.Y=3912.339mil|Location2.Y=4142.342mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R3-2(6.426mm,23.532mm) on Bottom Layer And Pad Tr1-5(27.143mm,27.171mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2162.102mil|Location2.X=2306.087mil|Location1.Y=3912.496mil|Location2.Y=3959.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2162.102mil|Location2.X=2306.087mil|Location1.Y=3912.496mil|Location2.Y=3959.905mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R5-2(1.279mm,23.537mm) on Bottom Layer And Pad R4-2(3.833mm,23.536mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2889.05mil|Location2.X=2956.105mil|Location1.Y=3564.11mil|Location2.Y=3797.854mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2889.05mil|Location2.X=2956.105mil|Location1.Y=3564.11mil|Location2.Y=3797.854mil|Absolute=True">Un-Routed Net Constraint: Net IC_C Between Pad U1-5(19.643mm,14.937mm) on Bottom Layer And Pad Tr1-2(20.043mm,18.421mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3168.577mil|Location2.X=3376.804mil|Location1.Y=4016.232mil|Location2.Y=4181.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3168.577mil|Location2.X=3376.804mil|Location1.Y=4016.232mil|Location2.Y=4181.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Tr1-5(27.143mm,27.171mm) on Multi-Layer And Pad V--1(30.479mm,28.662mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2941mil|Location2.X=3022.622mil|Location1.Y=3347.575mil|Location2.Y=3414.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2941mil|Location2.X=3022.622mil|Location1.Y=3347.575mil|Location2.Y=3414.63mil|Absolute=True">Un-Routed Net Constraint: Net IC_FB Between Pad U1-3(20.913mm,9.437mm) on Bottom Layer And Pad U1-2(22.183mm,9.437mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891mil|Location2.X=2972.622mil|Location1.Y=3564.11mil|Location2.Y=3631.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891mil|Location2.X=2972.622mil|Location1.Y=3564.11mil|Location2.Y=3631.165mil|Absolute=True">Un-Routed Net Constraint: Net IC_C Between Pad U1-5(19.643mm,14.937mm) on Bottom Layer And Pad U1-6(20.913mm,14.937mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
