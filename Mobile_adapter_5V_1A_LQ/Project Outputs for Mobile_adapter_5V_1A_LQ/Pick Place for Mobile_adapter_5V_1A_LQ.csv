@@ -1,0 +1,32 @@
+Altium Designer Pick and Place Locations
+D:\SMPS projects\Mobile_adapter_5V_1A_LQ\Mobile_adapter_5V_1A_LQ\Project Outputs for Mobile_adapter_5V_1A_LQ\Pick Place for Mobile_adapter_5V_1A_LQ.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       21-05-25
+Time:       12:36
+Revision:   c8f655abf0c741c67a8892f185e8d0681aa71016
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"CY1","222","TopLayer","C_TH_104/102","31.3475","23.5338","90","Keltron 222 1kv Capacitor"
+"Tr1","TR_MC_5V1A","TopLayer","T_EE19_5V1A","22.4435","22.7959","90",""
+"V-","Vout-","TopLayer","Wire_solder_connector__SMD_-_duplicate","30.4792","28.6624","0",""
+"V+","Vout+","TopLayer","Wire_solder_connector__SMD_-_duplicate","23.9800","28.8370","0",""
+"D2","F7","BottomLayer","SOD123F-F7","11.8540","28.5970","180","1.3V@1A 500ns Independent Type 1A 1kV SOD-123F Fast Recovery / High Efficiency Diodes ROHS"
+"D1","SS24F","BottomLayer","SMAF","12.1630","25.0440","180","40V 550mV@2A 2A SMAF Schottky Diodes ROHS"
+"U1","MT2513","BottomLayer","SOP8-7","21.5620","12.6750","90","MT2513 SOP8 Integrated Circuits"
+"R5","1K","BottomLayer","R_0603","1.2790","24.4370","270","100mW Thick Film Resistors 75V ±100ppm/? ±1% 1kO 0603 Chip Resistor - Surface Mount ROHS"
+"R4","1K","BottomLayer","R_0603","3.8330","24.4360","270","100mW Thick Film Resistors 75V ±100ppm/? ±1% 1kO 0603 Chip Resistor - Surface Mount ROHS"
+"R3","1K","BottomLayer","R_0603","6.4262","24.4320","270","100mW Thick Film Resistors 75V ±100ppm/? ±1% 1kO 0603 Chip Resistor - Surface Mount ROHS"
+"R1","115K","BottomLayer","R_0603","28.8619","12.9421","270","100mW Thin Film Resistor ±50ppm/? ±0.1% 115kO 0603 Chip Resistor - Surface Mount ROHS"
+"LED1","LED 3mm RG Com cathod","TopLayer","LED_RG_3mm","3.8170","28.1040","180","Red Green Common Cathode  P=2.54mm"
+"J2","N","TopLayer","MMT_Metal_shrapnel_connector","25.6760","6.1050","0","Metal Shrapnel mmt connector mobile charger"
+"J1","L","TopLayer","MMT_Metal_shrapnel_connector","7.4146","6.1947","0","Metal Shrapnel mmt connector mobile charger"
+"IC1","MB10F","BottomLayer","MB10F","8.8230","12.4200","0","30A 1.1V@800mA 800mA 1kV MBF Bridge Rectifiers ROHS"
+"E3","10uF","TopLayer","CAP_D5XL11","4.0480","19.1380","180","10uF 50V ±20% Plugin,D5xL7mm Aluminum Electrolytic Capacitors - Leaded ROHS"
+"E2","680uF","TopLayer","CAP_D6.5XL12","10.7250","18.8770","90","680uF 6.3V ±20% Plugin,D6.3xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS"
+"E1","6.8uF 400V","TopLayer","CAP_D8XL13","16.4470","10.8390","90","6.8uF 400V ±20% Plugin,D8xL12mm Aluminum Electrolytic Capacitors - Leaded ROHS"
+"C1","10pF","BottomLayer","C_0603","26.2127","13.0137","90","25V 10pF C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"

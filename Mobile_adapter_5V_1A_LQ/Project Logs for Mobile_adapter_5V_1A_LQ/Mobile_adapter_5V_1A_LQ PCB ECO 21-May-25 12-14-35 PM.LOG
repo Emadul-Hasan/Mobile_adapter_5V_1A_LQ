@@ -1,0 +1,11 @@
+Change Component Designator: OldDesignator=V+ NewDesignator=J3
+Change Component Designator: OldDesignator=V- NewDesignator=J4
+Change Component Description : Designator=D2 Old Description= New Description=1.3V@1A 500ns Independent Type 1A 1kV SOD-123F Fast Recovery / High Efficiency Diodes ROHS
+Change Component Description : Designator=D1 Old Description= New Description=40V 550mV@2A 2A SMAF Schottky Diodes ROHS
+Change component parameters: Designator = "D1" ("D1"); Footprint = "SMAF"; UniqueID = "\FBXSDVVP" ("\FBXSDVVP")
+Change component parameters (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Schottky-Diodes_Guangdong-Hottech-SS24F_C190803.html?s_z=n_SS24F"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PN"; Value = "SS24F"; VariantName = "[No Variations]"
+Change component parameters: Designator = "D2" ("D2"); Footprint = "SOD123F-F7"; UniqueID = "\PYZPQWVM" ("\PYZPQWVM")
+Change component parameters (AddParameter): Name = "Link"; Value = "https://lcsc.com/product-detail/Fast-Recovery-High-Efficiency-Diodes_HXY-MOSFET-F7_C5199090.html?s_z=n_F7"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PN"; Value = "F7"; VariantName = "[No Variations]"
+Added Room: Name=Mobile_adapter_5V_1A_LQ
